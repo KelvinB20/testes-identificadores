@@ -100,7 +100,8 @@ class Validators:
             elif not re.search("[_@$]", password):
                 flag = -1
                 break
-            elif re.search("\s", password):
+            elif re.search(r"\s", password):  # Adicionando o prefixo 'r' para string raw
+
                 flag = -1
                 break
             else:
